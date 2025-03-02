@@ -1,0 +1,524 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* font */
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* from figma */
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #fff;
+    background-color: #1f2029;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  /* from figma */
+
+  p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #fff;
+    margin: 0;
+  }
+
+
+.wrapper{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.container{
+    position: relative;
+    margin: 0 auto;
+    max-width: calc(100% - 40px);
+    width: 860px;;
+    padding: 100px 0;
+    display: flex;
+    flex-wrap: wrap;
+    /* border: 5px solid red; */
+
+}
+
+/* margin: 0 auto; only works if the element has a fixed width or max-width (not 100%). */
+
+.fluid-section{
+  position: relative;
+  display: block;
+}
+
+/* using attribute selector to disable the radio */
+
+[type="radio"]:checked,[type="radio"]:not(:checked){
+  position: absolute;
+  visibility: hidden;
+}
+
+/*  use of adjacent sibling slector */
+.color-bttn:checked + label , .color-bttn:not(:checked) + label{
+  position: relative;
+  height: 40px;
+  transition: all 200ms linear;
+  border-radius: 4px;
+  width: 40px;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+  color: #ffeba7;
+  margin-right: 10px;
+  box-shadow: 0 12px 35px 0 rgba(16, 39, 112, 0.25);
+  z-index: 10;
+  background-position: center;
+  background-size: cover;
+  border: 3px solid transparent;
+  display: inline-block;
+  
+  background-color: pink;
+  /* to test */
+  
+}
+
+.color-bttn:checked + label {
+  border-color: #434343;
+  transform: scale(1.1);
+  /* to maintain the size */
+}
+
+/* images for the colour */
+label.first-color{
+  background-image: url(/Animation-and-Responsiveness/Modern-Chair-Website/Assets/color1.jpg);
+  margin-left: 500px;
+  /* to move on right */
+}
+
+label.second-color{
+  background-image: url(/Animation-and-Responsiveness/Modern-Chair-Website/Assets/color2.jpg);
+}
+
+label.third-color{
+  background-image: url(/Animation-and-Responsiveness/Modern-Chair-Website/Assets/color3.jpg);
+}
+
+label.fourth-color{
+  background-image: url(/Animation-and-Responsiveness/Modern-Chair-Website/Assets/color4.jpg);
+}
+
+label.fifth-color{
+  background-image: url(/Animation-and-Responsiveness/Modern-Chair-Website/Assets/color5.jpg);
+}
+
+label.sixth-color{
+  background-image: url(/Animation-and-Responsiveness/Modern-Chair-Website/Assets/color6.jpg);
+}
+
+.img-wrap {
+  display: inline-block;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 500px;
+  height: 410px;
+  z-index: 9;
+  transition: all 550ms linear;
+}
+
+/* used define the div seprately */
+
+.img-wrap div {
+  position: absolute;
+  width: 500px;
+  height: 410px;
+  background-position: center top;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97);
+}
+/* used for the pictures */
+
+
+.img-wrap .chair-1 {
+  background-image: url("/Animation-and-Responsiveness/Modern-Chair-Website/Assets/chair1.png");
+}
+
+.img-wrap .chair-2 {
+  background-image: url("/Animation-and-Responsiveness/Modern-Chair-Website/Assets/chair2.png");
+}
+
+.img-wrap .chair-3 {
+  background-image: url("/Animation-and-Responsiveness/Modern-Chair-Website/Assets/chair3.png");
+}
+
+.img-wrap .chair-4 {
+  background-image: url("/Animation-and-Responsiveness/Modern-Chair-Website/Assets/chair4.png");
+}
+
+.img-wrap .chair-5 {
+  background-image: url("/Animation-and-Responsiveness/Modern-Chair-Website/Assets/chair5.png");
+}
+
+.img-wrap .chair-6 {
+  background-image: url("/Animation-and-Responsiveness/Modern-Chair-Website/Assets/chair6.png");
+}
+
+.color-1:checked ~ .img-wrap .chair-1 {
+  opacity: 1;
+  animation: shake 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+.color-2:checked ~ .img-wrap .chair-2 {
+  opacity: 1;
+  animation: shake 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+.color-3:checked ~ .img-wrap .chair-3 {
+  opacity: 1;
+  animation: shake 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+.color-4:checked ~ .img-wrap .chair-4 {
+  opacity: 1;
+  animation: shake 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+.color-5:checked ~ .img-wrap .chair-5 {
+  opacity: 1;
+  animation: shake 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+.color-6:checked ~ .img-wrap .chair-6 {
+  opacity: 1;
+  animation: shake 0.7s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0) rotate(-1deg);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0) rotate(2deg);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-3px, 0, 0) rotate(-3deg);
+  }
+  40%,
+  60% {
+    transform: translate3d(3px, 0, 0) rotate(3deg);
+  }
+}
+
+/* background color */
+.back-color {
+  position: fixed;
+  /* used fixed as it is relative to viewport and we wanted to make sure when we scroll down it remains there */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-image: linear-gradient(196deg, #f1a9a9, #e66767);
+  transition: all 250ms linear;
+  transition-delay: 300ms;
+}
+
+.back-color {
+  opacity: 0; /* Add this line */
+}
+.color-1:checked ~ .back-color.chair-1 {
+  opacity: 1; /* Show only when the first color is selected */
+}
+
+.back-color.chair-2 {
+  background-image: linear-gradient(196deg, #4c4c4c, #262626);
+  opacity: 0;
+}
+.color-2:checked ~ .back-color.chair-2 {
+  opacity: 1;
+}
+.back-color.chair-3 {
+  background-image: linear-gradient(196deg, #8a9fb2, #5f7991);
+  opacity: 0;
+}
+.color-3:checked ~ .back-color.chair-3 {
+  opacity: 1;
+}
+.back-color.chair-4 {
+  background-image: linear-gradient(196deg, #97afc3, #6789a7);
+  opacity: 0;
+}
+.color-4:checked ~ .back-color.chair-4 {
+  opacity: 1;
+}
+.back-color.chair-5 {
+  background-image: linear-gradient(196deg, #afa6a0, #8c7f76);
+  opacity: 0;
+}
+.color-5:checked ~ .back-color.chair-5 {
+  opacity: 1;
+}
+.back-color.chair-6 {
+  background-image: linear-gradient(196deg, #aaadac, #838786);
+  opacity: 0;
+}
+.color-6:checked ~ .back-color.chair-6 {
+  opacity: 1;
+}
+
+.info{
+  position: relative;
+  margin-left: 500px;
+  z-index: 10;
+  text-align: left;
+}
+
+.title-up {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 13px;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-weight: 800;
+  font-size: 34px;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+h4 {
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+h4 span {
+  text-decoration: line-through;
+  font-size: 20px;
+  opacity: 0.6;
+  padding-left: 15px;
+}
+
+h5 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.desc-bttn:checked + label,
+.desc-bttn:not(:checked) + label {
+  position: relative;
+  transition: all 200ms linear;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.2;
+  margin-right: 25px;
+  opacity: 0.5;
+}
+
+.desc-bttn:checked + label {
+  opacity: 1;
+}
+.desc-bttn:not(:checked) + label:hover {
+  opacity: 0.8;
+}
+
+.fluid-section-desc {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  transition: all 250ms linear;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+  transform: translateY(20px);
+}
+
+.fluid-section-desc.desc-2 {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+#desc:checked ~ .fluid-section-desc.desc-1 {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+#detail-bttn:checked ~ .fluid-section-desc.desc-2 {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+
+.inline p {
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+}
+.inline p span {
+  font-size: 30px;
+  line-height: 1.1;
+}
+
+.button {
+  position: relative;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 2;
+  height: 48px;
+  border-radius: 4px;
+  width: 210px;
+  letter-spacing: 1px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  background-color: transparent;
+  color: #fff;
+  box-shadow: 0 6px 15px 0 rgba(16, 39, 112, 0.15);
+  transition: all 250ms linear;
+  text-decoration: none;
+  margin-top: 50px;
+  margin-left: 500px;
+  z-index: 10;
+}
+
+i {
+  padding-right: 10px;
+  font-size: 15px;
+}
+
+.button:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  z-index: -1;
+  background-color: #944852;
+  transition: background-color 250ms 300ms ease;
+}
+
+.button:hover {
+  box-shadow: 0 12px 35px 0 rgba(16, 39, 112, 0.25);
+  background-color: #333;
+}
+.color-2:checked ~ .cart .button:before {
+  background-color: #1a1a1a;
+}
+.color-3:checked ~ .cart .button:before {
+  background-color: #40566e;
+}
+.color-4:checked ~ .cart .button:before {
+  background-color: #5e89b2;
+}
+.color-5:checked ~ .cart .button:before {
+  background-color: #8c7f76;
+}
+.color-6:checked ~ .cart .button:before {
+  background-color: #5d6160;
+}
+
+@media screen and (max-width: 991px) {
+  .container {
+    margin: 0 auto;
+    text-align: center;
+    max-width: calc(100% - 40px);
+    width: 370px;
+    margin-top: 50px;
+  }
+  label.first-color {
+    margin-left: 0;
+  }
+  .info {
+    margin-left: 0;
+    width: 370px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .img-wrap {
+    width: 375px;
+    height: 308px;
+    left: 50%;
+    margin-left: -250px;
+    margin-top: -90px;
+  }
+  .mob-margin {
+    margin-top: 320px;
+  }
+  .desc-bttn:checked + label,
+  .desc-bttn:not(:checked) + label {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+  .color-bttn:checked + label,
+  .color-bttn:not(:checked) + label {
+    height: 40px;
+    width: 40px;
+    margin: 5px auto;
+    text-align: center;
+  }
+  .inline {
+    margin: 0 5px;
+  }
+
+  .button{
+    margin-left: 80px;
+  }
+  
+}
+
+@media screen and (max-width: 575px) {
+  .container{
+    width: 280px;
+  }
+  .info {
+    width: 280px;
+  }
+  .color-bttn:checked + label,
+  .color-bttn:not(:checked) + label {
+    height: 30px;
+    width: 30px;
+  }
+  .inline p span {
+    font-size: 24px;
+    line-height: 1.1;
+  }
+  .inline p {
+    font-size: 14px;
+  }
+
+  .button{
+    margin-left: 30px;
+  }
+}
+
+
