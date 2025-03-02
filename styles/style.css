@@ -97,29 +97,29 @@ body {
 
 /* images for the colour */
 label.first-color{
-  background-image: url(/Animation-and-Responsiveness/Modern-Chair-Website/Assets/color1.jpg);
+  background-image: url(/Assets/color1.jpg);
   margin-left: 500px;
   /* to move on right */
 }
 
 label.second-color{
-  background-image: url(/Animation-and-Responsiveness/Modern-Chair-Website/Assets/color2.jpg);
+  background-image: url(/Assets/color2.jpg);
 }
 
 label.third-color{
-  background-image: url(/Animation-and-Responsiveness/Modern-Chair-Website/Assets/color3.jpg);
+  background-image: url(/Assets/color3.jpg);
 }
 
 label.fourth-color{
-  background-image: url(/Animation-and-Responsiveness/Modern-Chair-Website/Assets/color4.jpg);
+  background-image: url(/Assets/color4.jpg);
 }
 
 label.fifth-color{
-  background-image: url(/Animation-and-Responsiveness/Modern-Chair-Website/Assets/color5.jpg);
+  background-image: url(/Assets/color5.jpg);
 }
 
 label.sixth-color{
-  background-image: url(/Animation-and-Responsiveness/Modern-Chair-Website/Assets/color6.jpg);
+  background-image: url(/Assets/color6.jpg);
 }
 
 .img-wrap {
@@ -149,27 +149,27 @@ label.sixth-color{
 
 
 .img-wrap .chair-1 {
-  background-image: url("/Animation-and-Responsiveness/Modern-Chair-Website/Assets/chair1.png");
+  background-image: url("/Assets/chair1.png");
 }
 
 .img-wrap .chair-2 {
-  background-image: url("/Animation-and-Responsiveness/Modern-Chair-Website/Assets/chair2.png");
+  background-image: url("/Assets/chair2.png");
 }
 
 .img-wrap .chair-3 {
-  background-image: url("/Animation-and-Responsiveness/Modern-Chair-Website/Assets/chair3.png");
+  background-image: url("/Assets/chair3.png");
 }
 
 .img-wrap .chair-4 {
-  background-image: url("/Animation-and-Responsiveness/Modern-Chair-Website/Assets/chair4.png");
+  background-image: url("/Assets/chair4.png");
 }
 
 .img-wrap .chair-5 {
-  background-image: url("/Animation-and-Responsiveness/Modern-Chair-Website/Assets/chair5.png");
+  background-image: url("/Assets/chair5.png");
 }
 
 .img-wrap .chair-6 {
-  background-image: url("/Animation-and-Responsiveness/Modern-Chair-Website/Assets/chair6.png");
+  background-image: url("/Assets/chair6.png");
 }
 
 .color-1:checked ~ .img-wrap .chair-1 {
